@@ -75,7 +75,8 @@
 
     <section id="results">
       <div class="wrap">
-        <h2>Results Comparison</h2>
+        <p class="eyebrow">Results</p>
+        <h2>Comparison with Prior Methods</h2>
         <p class="lede">
           Fourteen single-image inputs: vehicles, mecha, creatures, statues, furniture, architecture and dioramas.
           Click <b>Load 3D</b> on a row, then drag any cell to orbit. All cells in a row turn together. Switch between
@@ -93,7 +94,8 @@
     </section>
 
     <section id="parts" class="wrap">
-      <h2>Part Decomposition</h2>
+      <p class="eyebrow">Parts</p>
+      <h2>Native Part Decomposition</h2>
       <p class="lede">
         PartBloom generates parts natively. Each part is split by function and independent motion, and small fixed
         attachments stay with the part they belong to. We compare against dedicated 3D part-segmentation methods,
@@ -108,7 +110,8 @@
     </section>
 
     <section id="rigging" class="wrap">
-      <h2>Rigging</h2>
+      <p class="eyebrow">Rigging</p>
+      <h2>Rig-Ready Assets</h2>
       <p class="lede">Each output part is a functional, independently moving piece, so the assets can be rigged and animated directly.</p>
       <div class="video-grid">
         <figure>
@@ -127,7 +130,8 @@
     </section>
 
     <section id="method" class="wrap">
-      <h2>Method</h2>
+      <p class="eyebrow">Method</p>
+      <h2>Framework Overview</h2>
       <p class="lede">PartBloom works in two stages: the LLM agent fixes the structure, then the diffusion model fills in the detail.</p>
       <figure class="method-figure">
         <svg viewBox="0 0 1200 520" role="img" aria-labelledby="method-title method-desc">
@@ -258,6 +262,7 @@
     </section>
 
     <section id="start" class="wrap">
+      <p class="eyebrow">Code</p>
       <h2>Get Started</h2>
       <p class="lede">The full pipeline, prompts and configs are on <a href="https://github.com/brain-labbb/PartBloom">GitHub</a>. Setup steps are in the README.</p>
       <div class="code-block">
@@ -271,7 +276,8 @@ python partbloom/run.py run \
     </section>
 
     <section id="citation" class="wrap">
-      <h2>Citation</h2>
+      <p class="eyebrow">Citation</p>
+      <h2>BibTeX</h2>
       <div class="code-block">
         <button type="button" class="copy" data-copy="bibtex">Copy</button>
 <pre id="bibtex"><code>@misc{partbloom2026,
