@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PartBloom</title>
+  <meta name="description" content="PartBloom: an LLM agent builds a part-level coarse proxy, and a diffusion model blooms it into a detailed, textured, part-level 3D asset.">
+  <meta property="og:title" content="PartBloom: Structure First. Details Bloom.">
+  <meta property="og:description" content="Part-level 3D generation from a single image with LLM agents and TRELLIS.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cg fill='%23d6457a'%3E%3Ccircle cx='16' cy='9' r='6'/%3E%3Ccircle cx='23' cy='16' r='6' opacity='.8'/%3E%3Ccircle cx='16' cy='23' r='6' opacity='.65'/%3E%3Ccircle cx='9' cy='16' r='6' opacity='.8'/%3E%3C/g%3E%3Ccircle cx='16' cy='16' r='3.2' fill='%23ffd166'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <canvas id="stage" aria-hidden="true"></canvas>
+
+  <nav class="topnav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">PartBloom</a>
+      <div class="nav-links">
+        <a href="#video">Video</a>
+        <a href="#results">Results</a>
+        <a href="#parts">Parts</a>
+        <a href="#rigging">Rigging</a>
+        <a href="#method">Method</a>
+        <a href="#start">Get started</a>
+        <a href="#citation">Citation</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap">
+      <h1>PartBloom</h1>
+      <p class="tagline">Structure First. Details Bloom.</p>
+      <p class="authors">Anonymous Authors</p>
+      <div class="links">
+        <span class="btn pill disabled" aria-disabled="true" title="Paper coming soon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 2v6h6M9 13h7M9 17h7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          Paper <em>coming soon</em>
+        </span>
+        <a class="btn pill" href="https://github.com/brain-labbb/PartBloom">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.42c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+          Code
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="video" class="wrap">
+      <div class="teaser placeholder-box" role="img" aria-label="Teaser video placeholder">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M10 8.2v7.6l6-3.8z" fill="currentColor"/></svg>
+        <span>Teaser video coming soon</span>
+      </div>
+      <p class="intro">
+        <strong>PartBloom</strong> is an open-source agentic framework for single-image 3D generation. An LLM agent
+        plans the object's functional parts and builds them as a coarse voxel proxy with explicit drawing tools.
+        A diffusion model (TRELLIS) then refines the proxy and decodes every part from one shared latent, so each part
+        comes out as its own detailed, textured mesh that fits the rest of the object. The agent stage is model-agnostic;
+        results here use Claude Opus 5.5, GPT-6-Astra and Gemini-4-Argon.
+      </p>
+    </section>
+
+    <section id="results">
+      <div class="wrap">
+        <h2>Results Comparison</h2>
+        <p class="lede">
+          Fourteen single-image inputs: vehicles, mecha, creatures, statues, furniture, architecture and dioramas.
+          Click <b>Load 3D</b> on a row, then drag any cell to orbit. All cells in a row turn together. Switch between
+          <b>textured</b>, <b>part-colored</b> and <b>clay</b> display, or choose which agent LLM drives PartBloom and Direct Blender.
+          <b>⤢</b> opens a large viewer with an exploded view and the part list.
+        </p>
+        <dl class="legend">
+          <div><dt>PartBloom</dt><dd>Ours. An LLM agent builds the part-level proxy and TRELLIS blooms the details.</dd></div>
+          <div><dt>PhysX-Omni</dt><dd>Its fine-tuned VLM predicts a voxel structure, which TRELLIS decodes (seed 1).</dd></div>
+          <div><dt>Direct Blender</dt><dd>The same agent LLM writes Blender Python directly (Claude Code, Codex, Antigravity CLI).</dd></div>
+        </dl>
+      </div>
+      <div class="toolbar-wrap"><div class="wrap toolbar" id="results-toolbar"></div></div>
+      <div class="wrap rows" id="results-rows"></div>
+    </section>
+
+    <section id="parts" class="wrap">
+      <h2>Part Decomposition</h2>
+      <p class="lede">
+        PartBloom generates parts natively. Each part is split by function and independent motion, and small fixed
+        attachments stay with the part they belong to. We compare against dedicated 3D part-segmentation methods,
+        SegviGen and PartLLM (general granularity), which split a finished asset after the fact. Colors mark parts.
+        To explore our parts in 3D, use <b>Parts</b> mode or the exploded view above.
+      </p>
+      <div class="figure-stack">
+        <img src="assets/parts/parts_01.webp" alt="Part decomposition comparison, rows 1 to 5" loading="lazy">
+        <img src="assets/parts/parts_02.webp" alt="Part decomposition comparison, rows 6 to 10" loading="lazy">
+        <img src="assets/parts/parts_03.webp" alt="Part decomposition comparison, rows 11 to 14" loading="lazy">
+      </div>
+    </section>
+
+    <section id="rigging" class="wrap">
+      <h2>Rigging</h2>
+      <p class="lede">Each output part is a functional, independently moving piece, so the assets can be rigged and animated directly.</p>
+      <div class="video-grid">
+        <figure>
+          <video src="assets/rigging/covered_wagon.mp4" autoplay muted loop playsinline preload="metadata"></video>
+          <figcaption><b>Covered Wagon</b>: drive and steer<span>PartBloom + Claude Opus 5.5</span></figcaption>
+        </figure>
+        <figure>
+          <video src="assets/rigging/mech_boar.mp4" autoplay muted loop playsinline preload="metadata"></video>
+          <figcaption><b>Mech Boar</b>: run cycle<span>PartBloom + GPT-6-Astra</span></figcaption>
+        </figure>
+        <figure>
+          <video src="assets/rigging/mecha.mp4" autoplay muted loop playsinline preload="metadata"></video>
+          <figcaption><b>Mecha</b>: shield charge<span>PartBloom + Claude Opus 5.5</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="method" class="wrap">
+      <h2>Method</h2>
+      <p class="lede">PartBloom works in two stages: the LLM agent fixes the structure, then the diffusion model fills in the detail.</p>
+      <figure class="method-figure">
+        <svg viewBox="0 0 1200 520" role="img" aria-labelledby="method-title method-desc">
+          <title id="method-title">PartBloom pipeline</title>
+          <desc id="method-desc">Stage one: an LLM agent with Planner, Builder and Reviewer builds a part-level coarse voxel proxy from the input image. Stage two: TRELLIS refines the proxy with a support band and image-guided denoising, samples one shared structured latent, and decodes and textures each part.</desc>
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0 0 10 5 0 10z" class="m-arrowhead"/>
+            </marker>
+            <clipPath id="clip-thumb"><rect width="150" height="150" rx="12"/></clipPath>
+          </defs>
+
+          <!-- input -->
+          <g transform="translate(20 150)">
+            <rect class="m-thumb-bg" width="150" height="150" rx="12"/>
+            <image href="assets/method/input.webp" width="150" height="150" clip-path="url(#clip-thumb)" preserveAspectRatio="xMidYMid slice"/>
+            <rect class="m-thumb-line" width="150" height="150" rx="12"/>
+            <text class="m-caption" x="75" y="176" text-anchor="middle">Input image</text>
+          </g>
+          <path class="m-flow" d="M176 225 H214" marker-end="url(#arrow)"/>
+
+          <!-- stage 1 -->
+          <g transform="translate(220 20)">
+            <rect class="m-stage s1" width="410" height="480" rx="20"/>
+            <text class="m-stage-num s1" x="24" y="38">STAGE 1</text>
+            <text class="m-stage-title" x="24" y="66">Structure first</text>
+            <text class="m-stage-sub" x="24" y="88">LLM agent · Claude / GPT / Gemini</text>
+
+            <g transform="translate(24 112)">
+              <rect class="m-box" width="362" height="66" rx="12"/>
+              <text class="m-box-title" x="16" y="27">Planner</text>
+              <text class="m-box-text" x="16" y="49">Chooses parts by function and independent motion</text>
+            </g>
+            <path class="m-flow" d="M205 182 V202" marker-end="url(#arrow)"/>
+            <g transform="translate(24 206)">
+              <rect class="m-box" width="362" height="92" rx="12"/>
+              <text class="m-box-title" x="16" y="27">Builder</text>
+              <text class="m-box-text" x="16" y="49">Edits a shared 64³ voxel canvas, part by part</text>
+              <g transform="translate(16 62)" class="m-chips">
+                <rect width="66" height="20" rx="10"/><text x="33" y="14.5" text-anchor="middle">polygon</text>
+                <rect x="74" width="56" height="20" rx="10"/><text x="102" y="14.5" text-anchor="middle">brush</text>
+                <rect x="138" width="52" height="20" rx="10"/><text x="164" y="14.5" text-anchor="middle">move</text>
+                <rect x="198" width="52" height="20" rx="10"/><text x="224" y="14.5" text-anchor="middle">clear</text>
+              </g>
+            </g>
+            <path class="m-flow" d="M205 302 V322" marker-end="url(#arrow)"/>
+            <g transform="translate(24 326)">
+              <rect class="m-box" width="362" height="66" rx="12"/>
+              <text class="m-box-title" x="16" y="27">Reviewer</text>
+              <text class="m-box-text" x="16" y="49">Compares proxy renders with the input image</text>
+            </g>
+            <path class="m-loop" d="M386 359 H398 V239 H390" marker-end="url(#arrow)"/>
+            <text class="m-note" x="404" y="300" transform="rotate(90 404 300)" text-anchor="middle">≤ 2 repair rounds</text>
+            <text class="m-out" x="24" y="428">Output</text>
+            <text class="m-box-text" x="24" y="450">Part-labeled coarse voxel proxy</text>
+          </g>
+
+          <!-- coarse proxy -->
+          <path class="m-flow" d="M636 225 H668" marker-end="url(#arrow)"/>
+          <g transform="translate(672 150)">
+            <rect class="m-thumb-bg" width="128" height="150" rx="12"/>
+            <image href="assets/method/coarse.webp" x="4" y="6" width="120" height="138" preserveAspectRatio="xMidYMid meet"/>
+            <rect class="m-thumb-line" width="128" height="150" rx="12"/>
+            <text class="m-caption" x="64" y="176" text-anchor="middle">Coarse proxy</text>
+          </g>
+          <path class="m-flow" d="M806 225 H836" marker-end="url(#arrow)"/>
+
+          <!-- stage 2 -->
+          <g transform="translate(840 20)">
+            <rect class="m-stage s2" width="340" height="480" rx="20"/>
+            <text class="m-stage-num s2" x="24" y="38">STAGE 2</text>
+            <text class="m-stage-title" x="24" y="66">Details bloom</text>
+            <text class="m-stage-sub" x="24" y="88">Diffusion model · TRELLIS</text>
+            <g class="m-steps">
+              <g transform="translate(24 108)">
+                <circle cx="11" cy="11" r="11"/><text class="m-step-n" x="11" y="15.5" text-anchor="middle">1</text>
+                <text class="m-box-title" x="32" y="16">Support band</text>
+                <text class="m-box-text" x="32" y="36">Dilate the proxy surface; SS-VAE encode</text>
+              </g>
+              <g transform="translate(24 166)">
+                <circle cx="11" cy="11" r="11"/><text class="m-step-n" x="11" y="15.5" text-anchor="middle">2</text>
+                <text class="m-box-title" x="32" y="16">Guided refinement</text>
+                <text class="m-box-text" x="32" y="36">Noise to t = 0.65, 12 image-guided steps</text>
+              </g>
+              <g transform="translate(24 224)">
+                <circle cx="11" cy="11" r="11"/><text class="m-step-n" x="11" y="15.5" text-anchor="middle">3</text>
+                <text class="m-box-title" x="32" y="16">Shared SLat</text>
+                <text class="m-box-text" x="32" y="36">Transfer part labels; sample one latent</text>
+              </g>
+              <g transform="translate(24 282)">
+                <circle cx="11" cy="11" r="11"/><text class="m-step-n" x="11" y="15.5" text-anchor="middle">4</text>
+                <text class="m-box-title" x="32" y="16">Per-part decoding</text>
+                <text class="m-box-text" x="32" y="36">Decode each part's slice of the latent</text>
+              </g>
+              <g transform="translate(24 340)">
+                <circle cx="11" cy="11" r="11"/><text class="m-step-n" x="11" y="15.5" text-anchor="middle">5</text>
+                <text class="m-box-title" x="32" y="16">Texture baking</text>
+                <text class="m-box-text" x="32" y="36">Gaussian appearance → per-part GLB</text>
+              </g>
+              <path class="m-rail" d="M35 132 V340"/>
+            </g>
+            <g transform="translate(24 398)">
+              <rect class="m-thumb-bg" width="66" height="66" rx="10"/>
+              <image href="assets/method/textured.webp" width="66" height="66" preserveAspectRatio="xMidYMid meet"/>
+              <rect class="m-thumb-line" width="66" height="66" rx="10"/>
+              <text class="m-out" x="82" y="30">Output</text>
+              <text class="m-box-text" x="82" y="52">Detailed, textured part-level asset</text>
+            </g>
+          </g>
+        </svg>
+      </figure>
+      <div class="method-notes">
+        <div>
+          <h3>Structure first</h3>
+          <p>A <b>Planner</b> reads the image and decides the parts. A <b>Builder</b> constructs each part on one shared 64³ voxel canvas with <code>polygon</code>, <code>brush</code>, <code>move</code> and <code>clear</code> tools; the drawing tools can also erase. A <b>Reviewer</b> compares renders of the proxy with the image and can start up to two whole-object repair rounds. The agent talks to any LLM through protocol adapters, so switching providers is a config change.</p>
+        </div>
+        <div>
+          <h3>Details bloom</h3>
+          <p>The proxy surface is dilated into a thin support band and encoded by the TRELLIS sparse-structure VAE, partially noised (t = 0.65) and refined by 12 image-guided denoising steps (CFG 5). Part labels move to the refined structure, one structured latent is sampled for the whole object, and each part is decoded from its own slice, so parts stay consistent with each other. TRELLIS's Gaussian decoder and texture baking produce a textured GLB for every part.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="start" class="wrap">
+      <h2>Get Started</h2>
+      <p class="lede">The full pipeline, prompts and configs are on <a href="https://github.com/brain-labbb/PartBloom">GitHub</a>. Setup steps are in the README.</p>
+      <div class="code-block">
+        <button type="button" class="copy" data-copy="code-run">Copy</button>
+<pre id="code-run"><code><span class="c"># Full pipeline: agent coarse proxy → guided refinement → per-part decoding → textures</span>
+python partbloom/run.py run \
+  --image path/to/image.png \
+  --api-config my_api.json --model claude-opus-5-5 --reasoning-effort high \
+  --out outputs/my_asset --gpu 0</code></pre>
+      </div>
+    </section>
+
+    <section id="citation" class="wrap">
+      <h2>Citation</h2>
+      <div class="code-block">
+        <button type="button" class="copy" data-copy="bibtex">Copy</button>
+<pre id="bibtex"><code>@misc{partbloom2026,
+  title        = {PartBloom: Structure First. Details Bloom.},
+  author       = {Anonymous},
+  year         = {2026},
+  howpublished = {\url{https://github.com/brain-labbb/PartBloom}}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>PartBloom builds on <a href="https://github.com/microsoft/TRELLIS">TRELLIS</a>. Code released under the MIT License.</p>
+  </footer>
+
+  <dialog id="viewer-modal" aria-labelledby="modal-title">
+    <div class="modal-inner">
+      <header class="modal-head">
+        <div>
+          <h3 id="modal-title"></h3>
+          <p id="modal-method"></p>
+        </div>
+        <button type="button" class="btn small ghost" id="modal-close" aria-label="Close viewer">Close ✕</button>
+      </header>
+      <div class="modal-body">
+        <div class="modal-view-wrap">
+          <canvas id="modal-stage" aria-hidden="true"></canvas>
+          <div class="view" id="modal-view" tabindex="0"><span class="spinner" aria-hidden="true"></span></div>
+          <p class="hint">Drag to orbit · scroll to zoom · double-click to reset</p>
+        </div>
+        <aside class="modal-side">
+          <div class="control"><span class="control-label">Display</span><div id="modal-mode"></div></div>
+          <label class="control">
+            <span class="control-label">Exploded view</span>
+            <input type="range" id="modal-explode" min="0" max="1.2" step="0.01" value="0">
+          </label>
+          <div class="control parts-control">
+            <span class="control-label">Parts <span id="modal-count"></span></span>
+            <ul id="modal-parts" class="part-list"></ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </dialog>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1178 @@
+[
+ {
+  "asset": "1000179163_1",
+  "category": "Mecha",
+  "input": "assets/inputs/1000179163_1.webp",
+  "cells": [
+   {
+    "method": "agentvoxel_opus55_high",
+    "family": "partbloom",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/agentvoxel_opus55_high/1000179163_1.glb",
+    "preview": "assets/previews/agentvoxel_opus55_high/1000179163_1.webp",
+    "meshes": 11,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_astra_medium",
+    "family": "partbloom",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/agentvoxel_astra_medium/1000179163_1.glb",
+    "preview": "assets/previews/agentvoxel_astra_medium/1000179163_1.webp",
+    "meshes": 21,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_argon_medium",
+    "family": "partbloom",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/agentvoxel_argon_medium/1000179163_1.glb",
+    "preview": "assets/previews/agentvoxel_argon_medium/1000179163_1.webp",
+    "meshes": 8,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "physx_omni",
+    "family": "physx_omni",
+    "model": "PhysX-Omni",
+    "glb": "assets/models/physx_omni/1000179163_1.glb",
+    "preview": "assets/previews/physx_omni/1000179163_1.webp",
+    "meshes": 5,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": true
+   },
+   {
+    "method": "direct_blender_opus55",
+    "family": "direct_blender",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/direct_blender_opus55/1000179163_1.glb",
+    "preview": "assets/previews/direct_blender_opus55/1000179163_1.webp",
+    "meshes": 132,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_astra",
+    "family": "direct_blender",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/direct_blender_astra/1000179163_1.glb",
+    "preview": "assets/previews/direct_blender_astra/1000179163_1.webp",
+    "meshes": 97,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_antigravity",
+    "family": "direct_blender",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/direct_blender_antigravity/1000179163_1.glb",
+    "preview": "assets/previews/direct_blender_antigravity/1000179163_1.webp",
+    "meshes": 111,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   }
+  ]
+ },
+ {
+  "asset": "20044a",
+  "category": "Sports Car",
+  "input": "assets/inputs/20044a.webp",
+  "cells": [
+   {
+    "method": "agentvoxel_opus55_high",
+    "family": "partbloom",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/agentvoxel_opus55_high/20044a.glb",
+    "preview": "assets/previews/agentvoxel_opus55_high/20044a.webp",
+    "meshes": 7,
+    "yaw": 335,
+    "elev": 22,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_astra_medium",
+    "family": "partbloom",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/agentvoxel_astra_medium/20044a.glb",
+    "preview": "assets/previews/agentvoxel_astra_medium/20044a.webp",
+    "meshes": 7,
+    "yaw": 335,
+    "elev": 22,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_argon_medium",
+    "family": "partbloom",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/agentvoxel_argon_medium/20044a.glb",
+    "preview": "assets/previews/agentvoxel_argon_medium/20044a.webp",
+    "meshes": 6,
+    "yaw": 335,
+    "elev": 22,
+    "metallicZero": false
+   },
+   {
+    "method": "physx_omni",
+    "family": "physx_omni",
+    "model": "PhysX-Omni",
+    "glb": "assets/models/physx_omni/20044a.glb",
+    "preview": "assets/previews/physx_omni/20044a.webp",
+    "meshes": 8,
+    "yaw": 335,
+    "elev": 22,
+    "metallicZero": true
+   },
+   {
+    "method": "direct_blender_opus55",
+    "family": "direct_blender",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/direct_blender_opus55/20044a.glb",
+    "preview": "assets/previews/direct_blender_opus55/20044a.webp",
+    "meshes": 73,
+    "yaw": 335,
+    "elev": 22,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_astra",
+    "family": "direct_blender",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/direct_blender_astra/20044a.glb",
+    "preview": "assets/previews/direct_blender_astra/20044a.webp",
+    "meshes": 95,
+    "yaw": 335,
+    "elev": 22,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_antigravity",
+    "family": "direct_blender",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/direct_blender_antigravity/20044a.glb",
+    "preview": "assets/previews/direct_blender_antigravity/20044a.webp",
+    "meshes": 80,
+    "yaw": 335,
+    "elev": 22,
+    "metallicZero": false
+   }
+  ]
+ },
+ {
+  "asset": "74549a",
+  "category": "Off-road SUV",
+  "input": "assets/inputs/74549a.webp",
+  "cells": [
+   {
+    "method": "agentvoxel_opus55_high",
+    "family": "partbloom",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/agentvoxel_opus55_high/74549a.glb",
+    "preview": "assets/previews/agentvoxel_opus55_high/74549a.webp",
+    "meshes": 10,
+    "yaw": 45,
+    "elev": 8,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_astra_medium",
+    "family": "partbloom",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/agentvoxel_astra_medium/74549a.glb",
+    "preview": "assets/previews/agentvoxel_astra_medium/74549a.webp",
+    "meshes": 11,
+    "yaw": 315,
+    "elev": 8,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_argon_medium",
+    "family": "partbloom",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/agentvoxel_argon_medium/74549a.glb",
+    "preview": "assets/previews/agentvoxel_argon_medium/74549a.webp",
+    "meshes": 9,
+    "yaw": 315,
+    "elev": 8,
+    "metallicZero": false
+   },
+   {
+    "method": "physx_omni",
+    "family": "physx_omni",
+    "model": "PhysX-Omni",
+    "glb": "assets/models/physx_omni/74549a.glb",
+    "preview": "assets/previews/physx_omni/74549a.webp",
+    "meshes": 13,
+    "yaw": 45,
+    "elev": 8,
+    "metallicZero": true
+   },
+   {
+    "method": "direct_blender_opus55",
+    "family": "direct_blender",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/direct_blender_opus55/74549a.glb",
+    "preview": "assets/previews/direct_blender_opus55/74549a.webp",
+    "meshes": 22,
+    "yaw": 315,
+    "elev": 8,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_astra",
+    "family": "direct_blender",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/direct_blender_astra/74549a.glb",
+    "preview": "assets/previews/direct_blender_astra/74549a.webp",
+    "meshes": 529,
+    "yaw": 315,
+    "elev": 8,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_antigravity",
+    "family": "direct_blender",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/direct_blender_antigravity/74549a.glb",
+    "preview": "assets/previews/direct_blender_antigravity/74549a.webp",
+    "meshes": 463,
+    "yaw": 270,
+    "elev": 8,
+    "metallicZero": false
+   }
+  ]
+ },
+ {
+  "asset": "d64c94df",
+  "category": "Covered Wagon",
+  "input": "assets/inputs/d64c94df.webp",
+  "cells": [
+   {
+    "method": "agentvoxel_opus55_high",
+    "family": "partbloom",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/agentvoxel_opus55_high/d64c94df.glb",
+    "preview": "assets/previews/agentvoxel_opus55_high/d64c94df.webp",
+    "meshes": 7,
+    "yaw": 90,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_astra_medium",
+    "family": "partbloom",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/agentvoxel_astra_medium/d64c94df.glb",
+    "preview": "assets/previews/agentvoxel_astra_medium/d64c94df.webp",
+    "meshes": 7,
+    "yaw": 90,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_argon_medium",
+    "family": "partbloom",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/agentvoxel_argon_medium/d64c94df.glb",
+    "preview": "assets/previews/agentvoxel_argon_medium/d64c94df.webp",
+    "meshes": 6,
+    "yaw": 90,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "physx_omni",
+    "family": "physx_omni",
+    "model": "PhysX-Omni",
+    "glb": "assets/models/physx_omni/d64c94df.glb",
+    "preview": "assets/previews/physx_omni/d64c94df.webp",
+    "meshes": 5,
+    "yaw": 90,
+    "elev": null,
+    "metallicZero": true
+   },
+   {
+    "method": "direct_blender_opus55",
+    "family": "direct_blender",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/direct_blender_opus55/d64c94df.glb",
+    "preview": "assets/previews/direct_blender_opus55/d64c94df.webp",
+    "meshes": 90,
+    "yaw": 90,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_astra",
+    "family": "direct_blender",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/direct_blender_astra/d64c94df.glb",
+    "preview": "assets/previews/direct_blender_astra/d64c94df.webp",
+    "meshes": 152,
+    "yaw": 90,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_antigravity",
+    "family": "direct_blender",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/direct_blender_antigravity/d64c94df.glb",
+    "preview": "assets/previews/direct_blender_antigravity/d64c94df.webp",
+    "meshes": 667,
+    "yaw": 90,
+    "elev": null,
+    "metallicZero": false
+   }
+  ]
+ },
+ {
+  "asset": "7baa867b",
+  "category": "Ornate Chair",
+  "input": "assets/inputs/7baa867b.webp",
+  "cells": [
+   {
+    "method": "agentvoxel_opus55_high",
+    "family": "partbloom",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/agentvoxel_opus55_high/7baa867b.glb",
+    "preview": "assets/previews/agentvoxel_opus55_high/7baa867b.webp",
+    "meshes": 4,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_astra_medium",
+    "family": "partbloom",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/agentvoxel_astra_medium/7baa867b.glb",
+    "preview": "assets/previews/agentvoxel_astra_medium/7baa867b.webp",
+    "meshes": 1,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_argon_medium",
+    "family": "partbloom",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/agentvoxel_argon_medium/7baa867b.glb",
+    "preview": "assets/previews/agentvoxel_argon_medium/7baa867b.webp",
+    "meshes": 4,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "physx_omni",
+    "family": "physx_omni",
+    "model": "PhysX-Omni",
+    "glb": "assets/models/physx_omni/7baa867b.glb",
+    "preview": "assets/previews/physx_omni/7baa867b.webp",
+    "meshes": 2,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": true
+   },
+   {
+    "method": "direct_blender_opus55",
+    "family": "direct_blender",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/direct_blender_opus55/7baa867b.glb",
+    "preview": "assets/previews/direct_blender_opus55/7baa867b.webp",
+    "meshes": 16,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_astra",
+    "family": "direct_blender",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/direct_blender_astra/7baa867b.glb",
+    "preview": "assets/previews/direct_blender_astra/7baa867b.webp",
+    "meshes": 178,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_antigravity",
+    "family": "direct_blender",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/direct_blender_antigravity/7baa867b.glb",
+    "preview": "assets/previews/direct_blender_antigravity/7baa867b.webp",
+    "meshes": 344,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   }
+  ]
+ },
+ {
+  "asset": "290af2dd",
+  "category": "Helmet",
+  "input": "assets/inputs/290af2dd.webp",
+  "cells": [
+   {
+    "method": "agentvoxel_opus55_high",
+    "family": "partbloom",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/agentvoxel_opus55_high/290af2dd.glb",
+    "preview": "assets/previews/agentvoxel_opus55_high/290af2dd.webp",
+    "meshes": 3,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_astra_medium",
+    "family": "partbloom",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/agentvoxel_astra_medium/290af2dd.glb",
+    "preview": "assets/previews/agentvoxel_astra_medium/290af2dd.webp",
+    "meshes": 6,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_argon_medium",
+    "family": "partbloom",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/agentvoxel_argon_medium/290af2dd.glb",
+    "preview": "assets/previews/agentvoxel_argon_medium/290af2dd.webp",
+    "meshes": 5,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "physx_omni",
+    "family": "physx_omni",
+    "model": "PhysX-Omni",
+    "glb": "assets/models/physx_omni/290af2dd.glb",
+    "preview": "assets/previews/physx_omni/290af2dd.webp",
+    "meshes": 7,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": true
+   },
+   {
+    "method": "direct_blender_opus55",
+    "family": "direct_blender",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/direct_blender_opus55/290af2dd.glb",
+    "preview": "assets/previews/direct_blender_opus55/290af2dd.webp",
+    "meshes": 25,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_astra",
+    "family": "direct_blender",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/direct_blender_astra/290af2dd.glb",
+    "preview": "assets/previews/direct_blender_astra/290af2dd.webp",
+    "meshes": 392,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_antigravity",
+    "family": "direct_blender",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/direct_blender_antigravity/290af2dd.glb",
+    "preview": "assets/previews/direct_blender_antigravity/290af2dd.webp",
+    "meshes": 298,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   }
+  ]
+ },
+ {
+  "asset": "7d7659d5",
+  "category": "Armor",
+  "input": "assets/inputs/7d7659d5.webp",
+  "cells": [
+   {
+    "method": "agentvoxel_opus55_high",
+    "family": "partbloom",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/agentvoxel_opus55_high/7d7659d5.glb",
+    "preview": "assets/previews/agentvoxel_opus55_high/7d7659d5.webp",
+    "meshes": 7,
+    "yaw": 15,
+    "elev": 8,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_astra_medium",
+    "family": "partbloom",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/agentvoxel_astra_medium/7d7659d5.glb",
+    "preview": "assets/previews/agentvoxel_astra_medium/7d7659d5.webp",
+    "meshes": 22,
+    "yaw": 15,
+    "elev": 8,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_argon_medium",
+    "family": "partbloom",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/agentvoxel_argon_medium/7d7659d5.glb",
+    "preview": "assets/previews/agentvoxel_argon_medium/7d7659d5.webp",
+    "meshes": 9,
+    "yaw": 15,
+    "elev": 8,
+    "metallicZero": false
+   },
+   {
+    "method": "physx_omni",
+    "family": "physx_omni",
+    "model": "PhysX-Omni",
+    "glb": "assets/models/physx_omni/7d7659d5.glb",
+    "preview": "assets/previews/physx_omni/7d7659d5.webp",
+    "meshes": 4,
+    "yaw": 15,
+    "elev": 8,
+    "metallicZero": true
+   },
+   {
+    "method": "direct_blender_opus55",
+    "family": "direct_blender",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/direct_blender_opus55/7d7659d5.glb",
+    "preview": "assets/previews/direct_blender_opus55/7d7659d5.webp",
+    "meshes": 59,
+    "yaw": 15,
+    "elev": 8,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_astra",
+    "family": "direct_blender",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/direct_blender_astra/7d7659d5.glb",
+    "preview": "assets/previews/direct_blender_astra/7d7659d5.webp",
+    "meshes": 175,
+    "yaw": 15,
+    "elev": 8,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_antigravity",
+    "family": "direct_blender",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/direct_blender_antigravity/7d7659d5.glb",
+    "preview": "assets/previews/direct_blender_antigravity/7d7659d5.webp",
+    "meshes": 147,
+    "yaw": 15,
+    "elev": 8,
+    "metallicZero": false
+   }
+  ]
+ },
+ {
+  "asset": "2bb09323",
+  "category": "Mech Boar",
+  "input": "assets/inputs/2bb09323.webp",
+  "cells": [
+   {
+    "method": "agentvoxel_opus55_high",
+    "family": "partbloom",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/agentvoxel_opus55_high/2bb09323.glb",
+    "preview": "assets/previews/agentvoxel_opus55_high/2bb09323.webp",
+    "meshes": 2,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_astra_medium",
+    "family": "partbloom",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/agentvoxel_astra_medium/2bb09323.glb",
+    "preview": "assets/previews/agentvoxel_astra_medium/2bb09323.webp",
+    "meshes": 14,
+    "yaw": 90,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_argon_medium",
+    "family": "partbloom",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/agentvoxel_argon_medium/2bb09323.glb",
+    "preview": "assets/previews/agentvoxel_argon_medium/2bb09323.webp",
+    "meshes": 7,
+    "yaw": 90,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "physx_omni",
+    "family": "physx_omni",
+    "model": "PhysX-Omni",
+    "glb": "assets/models/physx_omni/2bb09323.glb",
+    "preview": "assets/previews/physx_omni/2bb09323.webp",
+    "meshes": 7,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": true
+   },
+   {
+    "method": "direct_blender_opus55",
+    "family": "direct_blender",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/direct_blender_opus55/2bb09323.glb",
+    "preview": "assets/previews/direct_blender_opus55/2bb09323.webp",
+    "meshes": 37,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_astra",
+    "family": "direct_blender",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/direct_blender_astra/2bb09323.glb",
+    "preview": "assets/previews/direct_blender_astra/2bb09323.webp",
+    "meshes": 285,
+    "yaw": 90,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_antigravity",
+    "family": "direct_blender",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/direct_blender_antigravity/2bb09323.glb",
+    "preview": "assets/previews/direct_blender_antigravity/2bb09323.webp",
+    "meshes": 170,
+    "yaw": 90,
+    "elev": null,
+    "metallicZero": false
+   }
+  ]
+ },
+ {
+  "asset": "typical_creature_robot_crab",
+  "category": "Robot Crab",
+  "input": "assets/inputs/typical_creature_robot_crab.webp",
+  "cells": [
+   {
+    "method": "agentvoxel_opus55_high",
+    "family": "partbloom",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/agentvoxel_opus55_high/typical_creature_robot_crab.glb",
+    "preview": "assets/previews/agentvoxel_opus55_high/typical_creature_robot_crab.webp",
+    "meshes": 11,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_astra_medium",
+    "family": "partbloom",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/agentvoxel_astra_medium/typical_creature_robot_crab.glb",
+    "preview": "assets/previews/agentvoxel_astra_medium/typical_creature_robot_crab.webp",
+    "meshes": 15,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_argon_medium",
+    "family": "partbloom",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/agentvoxel_argon_medium/typical_creature_robot_crab.glb",
+    "preview": "assets/previews/agentvoxel_argon_medium/typical_creature_robot_crab.webp",
+    "meshes": 11,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "physx_omni",
+    "family": "physx_omni",
+    "model": "PhysX-Omni",
+    "glb": "assets/models/physx_omni/typical_creature_robot_crab.glb",
+    "preview": "assets/previews/physx_omni/typical_creature_robot_crab.webp",
+    "meshes": 10,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": true
+   },
+   {
+    "method": "direct_blender_opus55",
+    "family": "direct_blender",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/direct_blender_opus55/typical_creature_robot_crab.glb",
+    "preview": "assets/previews/direct_blender_opus55/typical_creature_robot_crab.webp",
+    "meshes": 82,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_astra",
+    "family": "direct_blender",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/direct_blender_astra/typical_creature_robot_crab.glb",
+    "preview": "assets/previews/direct_blender_astra/typical_creature_robot_crab.webp",
+    "meshes": 137,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_antigravity",
+    "family": "direct_blender",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/direct_blender_antigravity/typical_creature_robot_crab.glb",
+    "preview": "assets/previews/direct_blender_antigravity/typical_creature_robot_crab.webp",
+    "meshes": 170,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   }
+  ]
+ },
+ {
+  "asset": "5c80e5e0",
+  "category": "Bear Monster",
+  "input": "assets/inputs/5c80e5e0.webp",
+  "cells": [
+   {
+    "method": "agentvoxel_opus55_high",
+    "family": "partbloom",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/agentvoxel_opus55_high/5c80e5e0.glb",
+    "preview": "assets/previews/agentvoxel_opus55_high/5c80e5e0.webp",
+    "meshes": 2,
+    "yaw": 30,
+    "elev": 8,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_astra_medium",
+    "family": "partbloom",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/agentvoxel_astra_medium/5c80e5e0.glb",
+    "preview": "assets/previews/agentvoxel_astra_medium/5c80e5e0.webp",
+    "meshes": 16,
+    "yaw": 30,
+    "elev": 8,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_argon_medium",
+    "family": "partbloom",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/agentvoxel_argon_medium/5c80e5e0.glb",
+    "preview": "assets/previews/agentvoxel_argon_medium/5c80e5e0.webp",
+    "meshes": 7,
+    "yaw": 30,
+    "elev": 8,
+    "metallicZero": false
+   },
+   {
+    "method": "physx_omni",
+    "family": "physx_omni",
+    "model": "PhysX-Omni",
+    "glb": "assets/models/physx_omni/5c80e5e0.glb",
+    "preview": "assets/previews/physx_omni/5c80e5e0.webp",
+    "meshes": 2,
+    "yaw": 30,
+    "elev": 8,
+    "metallicZero": true
+   },
+   {
+    "method": "direct_blender_opus55",
+    "family": "direct_blender",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/direct_blender_opus55/5c80e5e0.glb",
+    "preview": "assets/previews/direct_blender_opus55/5c80e5e0.webp",
+    "meshes": 20,
+    "yaw": 30,
+    "elev": 8,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_astra",
+    "family": "direct_blender",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/direct_blender_astra/5c80e5e0.glb",
+    "preview": "assets/previews/direct_blender_astra/5c80e5e0.webp",
+    "meshes": 1565,
+    "yaw": 30,
+    "elev": 8,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_antigravity",
+    "family": "direct_blender",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/direct_blender_antigravity/5c80e5e0.glb",
+    "preview": "assets/previews/direct_blender_antigravity/5c80e5e0.webp",
+    "meshes": 79,
+    "yaw": 30,
+    "elev": 8,
+    "metallicZero": false
+   }
+  ]
+ },
+ {
+  "asset": "52284bf4",
+  "category": "Angel Statue",
+  "input": "assets/inputs/52284bf4.webp",
+  "cells": [
+   {
+    "method": "agentvoxel_opus55_high",
+    "family": "partbloom",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/agentvoxel_opus55_high/52284bf4.glb",
+    "preview": "assets/previews/agentvoxel_opus55_high/52284bf4.webp",
+    "meshes": 5,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_astra_medium",
+    "family": "partbloom",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/agentvoxel_astra_medium/52284bf4.glb",
+    "preview": "assets/previews/agentvoxel_astra_medium/52284bf4.webp",
+    "meshes": 4,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_argon_medium",
+    "family": "partbloom",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/agentvoxel_argon_medium/52284bf4.glb",
+    "preview": "assets/previews/agentvoxel_argon_medium/52284bf4.webp",
+    "meshes": 5,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "physx_omni",
+    "family": "physx_omni",
+    "model": "PhysX-Omni",
+    "glb": "assets/models/physx_omni/52284bf4.glb",
+    "preview": "assets/previews/physx_omni/52284bf4.webp",
+    "meshes": 2,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": true
+   },
+   {
+    "method": "direct_blender_opus55",
+    "family": "direct_blender",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/direct_blender_opus55/52284bf4.glb",
+    "preview": "assets/previews/direct_blender_opus55/52284bf4.webp",
+    "meshes": 26,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_astra",
+    "family": "direct_blender",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/direct_blender_astra/52284bf4.glb",
+    "preview": "assets/previews/direct_blender_astra/52284bf4.webp",
+    "meshes": 479,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_antigravity",
+    "family": "direct_blender",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/direct_blender_antigravity/52284bf4.glb",
+    "preview": "assets/previews/direct_blender_antigravity/52284bf4.webp",
+    "meshes": 225,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   }
+  ]
+ },
+ {
+  "asset": "51b1b31d",
+  "category": "Stone Castle",
+  "input": "assets/inputs/51b1b31d.webp",
+  "cells": [
+   {
+    "method": "agentvoxel_opus55_high",
+    "family": "partbloom",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/agentvoxel_opus55_high/51b1b31d.glb",
+    "preview": "assets/previews/agentvoxel_opus55_high/51b1b31d.webp",
+    "meshes": 5,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_astra_medium",
+    "family": "partbloom",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/agentvoxel_astra_medium/51b1b31d.glb",
+    "preview": "assets/previews/agentvoxel_astra_medium/51b1b31d.webp",
+    "meshes": 7,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_argon_medium",
+    "family": "partbloom",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/agentvoxel_argon_medium/51b1b31d.glb",
+    "preview": "assets/previews/agentvoxel_argon_medium/51b1b31d.webp",
+    "meshes": 5,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "physx_omni",
+    "family": "physx_omni",
+    "model": "PhysX-Omni",
+    "glb": "assets/models/physx_omni/51b1b31d.glb",
+    "preview": "assets/previews/physx_omni/51b1b31d.webp",
+    "meshes": 3,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": true
+   },
+   {
+    "method": "direct_blender_opus55",
+    "family": "direct_blender",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/direct_blender_opus55/51b1b31d.glb",
+    "preview": "assets/previews/direct_blender_opus55/51b1b31d.webp",
+    "meshes": 40,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_astra",
+    "family": "direct_blender",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/direct_blender_astra/51b1b31d.glb",
+    "preview": "assets/previews/direct_blender_astra/51b1b31d.webp",
+    "meshes": 544,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_antigravity",
+    "family": "direct_blender",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/direct_blender_antigravity/51b1b31d.glb",
+    "preview": "assets/previews/direct_blender_antigravity/51b1b31d.webp",
+    "meshes": 873,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   }
+  ]
+ },
+ {
+  "asset": "7d585a84",
+  "category": "Temple Ruins",
+  "input": "assets/inputs/7d585a84.webp",
+  "cells": [
+   {
+    "method": "agentvoxel_opus55_high",
+    "family": "partbloom",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/agentvoxel_opus55_high/7d585a84.glb",
+    "preview": "assets/previews/agentvoxel_opus55_high/7d585a84.webp",
+    "meshes": 6,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_astra_medium",
+    "family": "partbloom",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/agentvoxel_astra_medium/7d585a84.glb",
+    "preview": "assets/previews/agentvoxel_astra_medium/7d585a84.webp",
+    "meshes": 6,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_argon_medium",
+    "family": "partbloom",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/agentvoxel_argon_medium/7d585a84.glb",
+    "preview": "assets/previews/agentvoxel_argon_medium/7d585a84.webp",
+    "meshes": 6,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "physx_omni",
+    "family": "physx_omni",
+    "model": "PhysX-Omni",
+    "glb": "assets/models/physx_omni/7d585a84.glb",
+    "preview": "assets/previews/physx_omni/7d585a84.webp",
+    "meshes": 6,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": true
+   },
+   {
+    "method": "direct_blender_opus55",
+    "family": "direct_blender",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/direct_blender_opus55/7d585a84.glb",
+    "preview": "assets/previews/direct_blender_opus55/7d585a84.webp",
+    "meshes": 17,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_astra",
+    "family": "direct_blender",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/direct_blender_astra/7d585a84.glb",
+    "preview": "assets/previews/direct_blender_astra/7d585a84.webp",
+    "meshes": 1173,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_antigravity",
+    "family": "direct_blender",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/direct_blender_antigravity/7d585a84.glb",
+    "preview": "assets/previews/direct_blender_antigravity/7d585a84.webp",
+    "meshes": 712,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   }
+  ]
+ },
+ {
+  "asset": "74fe541e",
+  "category": "Bottle Diorama",
+  "input": "assets/inputs/74fe541e.webp",
+  "cells": [
+   {
+    "method": "agentvoxel_opus55_high",
+    "family": "partbloom",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/agentvoxel_opus55_high/74fe541e.glb",
+    "preview": "assets/previews/agentvoxel_opus55_high/74fe541e.webp",
+    "meshes": 3,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_astra_medium",
+    "family": "partbloom",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/agentvoxel_astra_medium/74fe541e.glb",
+    "preview": "assets/previews/agentvoxel_astra_medium/74fe541e.webp",
+    "meshes": 3,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "agentvoxel_argon_medium",
+    "family": "partbloom",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/agentvoxel_argon_medium/74fe541e.glb",
+    "preview": "assets/previews/agentvoxel_argon_medium/74fe541e.webp",
+    "meshes": 4,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "physx_omni",
+    "family": "physx_omni",
+    "model": "PhysX-Omni",
+    "glb": "assets/models/physx_omni/74fe541e.glb",
+    "preview": "assets/previews/physx_omni/74fe541e.webp",
+    "meshes": 3,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": true
+   },
+   {
+    "method": "direct_blender_opus55",
+    "family": "direct_blender",
+    "model": "Claude Opus 5.5",
+    "glb": "assets/models/direct_blender_opus55/74fe541e.glb",
+    "preview": "assets/previews/direct_blender_opus55/74fe541e.webp",
+    "meshes": 51,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_astra",
+    "family": "direct_blender",
+    "model": "GPT-6-Astra",
+    "glb": "assets/models/direct_blender_astra/74fe541e.glb",
+    "preview": "assets/previews/direct_blender_astra/74fe541e.webp",
+    "meshes": 521,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   },
+   {
+    "method": "direct_blender_antigravity",
+    "family": "direct_blender",
+    "model": "Gemini-4-Argon",
+    "glb": "assets/models/direct_blender_antigravity/74fe541e.glb",
+    "preview": "assets/previews/direct_blender_antigravity/74fe541e.webp",
+    "meshes": 310,
+    "yaw": 0,
+    "elev": null,
+    "metallicZero": false
+   }
+  ]
+ }
+]
