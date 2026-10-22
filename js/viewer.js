@@ -61,6 +61,12 @@ export class Model {
     this.parts = [...groups].map(([node, group], i) => {
       const materials = group.flatMap(m => [m.material].flat());
       if (metallicZero) materials.forEach(m => { m.metalness = 0; });
+      // Transmission needs a scene-wide pass the scissored views lack; show glass as see-through instead.
+      for (const m of materials) {
+        if (!m.transmission) continue;
+        const opacity = Math.min(m.opacity, 1 - .75 * m.transmission);
+        Object.assign(m, { transmission: 0, transparent: true, opacity, depthWrite: false });
+      }
       const partBox = new THREE.Box3();
       group.forEach(m => partBox.expandByObject(m));
       // PartBloom GLBs number their nodes and carry the part name on the material.

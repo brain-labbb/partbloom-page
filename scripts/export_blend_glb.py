@@ -2,7 +2,8 @@
 
 The agents color materials through ColorRamp nodes, which the glTF exporter drops, so the
 release asset.glb comes out white. This flattens each linked Base Color to the ramp's
-mean color before exporting; geometry and objects are unchanged.
+mean color, and turns transparent/glossy glass mixes into a see-through Principled BSDF,
+before exporting; geometry and objects are unchanged.
 
 Usage: blender -b ASSET.blend --python export_blend_glb.py -- OUT.glb
 """
@@ -37,10 +38,28 @@ def source_color(socket, depth=0):
     return None
 
 
+GLASS_NODES = {'BSDF_TRANSPARENT', 'BSDF_GLASS', 'BSDF_REFRACTION'}
+
+
+def as_glass(material):
+    """Replace a shader mix the exporter cannot read with a see-through Principled BSDF."""
+    tree = material.node_tree
+    output = next(n for n in tree.nodes if n.type == 'OUTPUT_MATERIAL')
+    bsdf = tree.nodes.new('ShaderNodeBsdfPrincipled')
+    bsdf.inputs['Base Color'].default_value = (.92, .95, .96, 1)
+    bsdf.inputs['Roughness'].default_value = .05
+    bsdf.inputs['Alpha'].default_value = .18
+    tree.links.new(bsdf.outputs[0], output.inputs['Surface'])
+    material.surface_render_method = 'BLENDED'
+    return bsdf
+
+
 for material in bpy.data.materials:
     if not material.use_nodes:
         continue
     bsdf = next((n for n in material.node_tree.nodes if n.type == 'BSDF_PRINCIPLED'), None)
+    if not bsdf and {n.type for n in material.node_tree.nodes} & GLASS_NODES:
+        bsdf = as_glass(material)
     if not bsdf:
         continue
     base = bsdf.inputs['Base Color']

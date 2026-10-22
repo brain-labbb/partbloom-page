@@ -63,7 +63,7 @@ def source_glb(method, asset, preview):
 
 def export_blend(blend, dst):
     dst.parent.mkdir(parents=True, exist_ok=True)
-    cmd = [BLENDER, '-b', str(blend), '--python', str(SITE / 'scripts' / 'export_blend_glb.py'), '--', str(dst)]
+    cmd = [BLENDER, '-b', str(blend), '--threads', '4', '--python', str(SITE / 'scripts' / 'export_blend_glb.py'), '--', str(dst)]
     result = subprocess.run(cmd, capture_output=True, text=True)
     if result.returncode != 0 or not dst.is_file():
         raise RuntimeError(f'{blend}: {result.stdout[-2000:]}{result.stderr[-2000:]}')
@@ -122,8 +122,10 @@ def main():
         rows.append({'asset': asset, 'category': row['category'],
                      'input': f'assets/inputs/{asset}.webp', 'cells': cells})
 
-    with ThreadPoolExecutor(args.workers) as pool:
+    # Blender is heavy; a few at a time avoids exhausting process threads.
+    with ThreadPoolExecutor(min(args.workers, 4)) as pool:
         list(pool.map(lambda job: export_blend(*job), exports))
+    with ThreadPoolExecutor(args.workers) as pool:
         list(pool.map(lambda job: compress(*job), jobs))
 
     for row in rows:
