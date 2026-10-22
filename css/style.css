@@ -64,12 +64,6 @@ code { font-family: var(--mono); font-size: .88em; }
   font-weight: 800; letter-spacing: -.035em;
   font-size: clamp(44px, 8vw, 76px); line-height: 1.05; margin: 0; color: #fff;
 }
-.hero h1 .bloom { color: var(--accent); }
-.version {
-  display: inline-block; margin: 16px 0 0; padding: 5px 14px; border-radius: 999px;
-  font-size: 14px; font-weight: 600; letter-spacing: .01em; color: var(--accent);
-  background: var(--accent-soft); border: 1px solid rgba(240, 113, 157, .35);
-}
 .tagline { font-size: clamp(18px, 2.4vw, 23px); font-weight: 500; letter-spacing: -.01em; color: var(--muted); margin: 12px 0 18px; }
 .authors { margin: 0 0 22px; font-size: 16px; }
 .links { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
