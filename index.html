@@ -44,7 +44,7 @@
     <div class="wrap">
       <h1>PartBloom</h1>
       <p class="tagline">Structure First. Details Bloom.</p>
-      <p class="authors">Anonymous Authors</p>
+
       <div class="links">
         <span class="btn pill disabled" aria-disabled="true" title="Paper coming soon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 2v6h6M9 13h7M9 17h7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
@@ -78,16 +78,9 @@
         <p class="eyebrow">Results</p>
         <h2>Comparison with Prior Methods</h2>
         <p class="lede">
-          Fourteen single-image inputs: vehicles, mecha, creatures, statues, furniture, architecture and dioramas.
-          Click <b>Load 3D</b> on a row, then drag any cell to orbit. All cells in a row turn together. Switch between
-          <b>textured</b>, <b>part-colored</b> and <b>clay</b> display, or choose which agent LLM drives PartBloom and Direct Blender.
-          <b>⤢</b> opens a large viewer with an exploded view and the part list.
+          14 single-image inputs across vehicles, mecha, creatures, statues, furniture, architecture and dioramas.
+          Click <b>Load 3D</b> to orbit any row. Switch between <b>textured</b>, <b>parts</b> and <b>clay</b> display, or pick which LLM drives PartBloom and Direct Blender. <b>⤢</b> opens the exploded view.
         </p>
-        <dl class="legend">
-          <div><dt>PartBloom</dt><dd>Ours. An LLM agent builds the part-level proxy and TRELLIS blooms the details.</dd></div>
-          <div><dt>PhysX-Omni</dt><dd>Its fine-tuned VLM predicts a voxel structure, which TRELLIS decodes (seed 1).</dd></div>
-          <div><dt>Direct Blender</dt><dd>The same agent LLM writes Blender Python directly (Claude Code, Codex, Antigravity CLI).</dd></div>
-        </dl>
       </div>
       <div class="toolbar-wrap"><div class="wrap toolbar" id="results-toolbar"></div></div>
       <div class="wrap rows" id="results-rows"></div>
@@ -259,21 +252,6 @@
           <p>The proxy surface is dilated into a thin support band and encoded by the TRELLIS sparse-structure VAE, partially noised (t = 0.65) and refined by 12 image-guided denoising steps (CFG 5). Part labels move to the refined structure, one structured latent is sampled for the whole object, and each part is decoded from its own slice, so parts stay consistent with each other. TRELLIS's Gaussian decoder and texture baking produce a textured GLB for every part.</p>
         </div>
       </div>
-    </section>
-
-    <section id="start" class="wrap">
-      <p class="eyebrow">Code</p>
-      <h2>Get Started</h2>
-      <p class="lede">The full pipeline, prompts and configs are on <a href="https://github.com/brain-labbb/PartBloom">GitHub</a>. Setup steps are in the README.</p>
-      <div class="code-block">
-        <button type="button" class="copy" data-copy="code-run">Copy</button>
-<pre id="code-run"><code><span class="c"># Full pipeline: agent coarse proxy → guided refinement → per-part decoding → textures</span>
-python partbloom/run.py run \
-  --image path/to/image.png \
-  --api-config my_api.json --model claude-opus-5-5 --reasoning-effort high \
-  --out outputs/my_asset --gpu 0</code></pre>
-      </div>
-    </section>
 
     <section id="citation" class="wrap">
       <p class="eyebrow">Citation</p>
