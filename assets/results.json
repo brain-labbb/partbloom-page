@@ -630,9 +630,9 @@
     "family": "physx_omni",
     "model": "PhysX-Omni",
     "glb": "assets/models/physx_omni/2bb09323.glb",
-    "preview": "assets/previews/physx_omni/2bb09323.webp",
+    "preview": "assets/previews/physx_omni/2bb09323.webp?v=alignment-20261023",
     "meshes": 7,
-    "yaw": 0,
+    "yaw": 110,
     "elev": null,
     "metallicZero": true
    },
@@ -714,9 +714,9 @@
     "family": "physx_omni",
     "model": "PhysX-Omni",
     "glb": "assets/models/physx_omni/typical_creature_robot_crab.glb",
-    "preview": "assets/previews/physx_omni/typical_creature_robot_crab.webp",
+    "preview": "assets/previews/physx_omni/typical_creature_robot_crab.webp?v=alignment-20261023",
     "meshes": 10,
-    "yaw": 0,
+    "yaw": 190,
     "elev": null,
     "metallicZero": true
    },
