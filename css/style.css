@@ -110,13 +110,10 @@ h2 { font-weight: 700; font-size: clamp(24px, 3.4vw, 32px); letter-spacing: -.02
 .lede { color: var(--muted); max-width: 860px; margin: 0 0 20px; }
 .lede b { color: var(--emph); font-weight: 600; }
 
-.placeholder-box {
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
-  aspect-ratio: 16 / 9; border: 1.5px dashed var(--line); border-radius: var(--radius);
-  background: repeating-linear-gradient(135deg, var(--surface) 0 14px, var(--surface-2) 14px 28px);
-  color: var(--muted); font-size: 15px;
+.teaser {
+  width: 100%; height: auto; aspect-ratio: 16 / 9;
+  border: 1px solid var(--line); border-radius: var(--radius); background: #03050a;
 }
-.placeholder-box svg { width: 46px; height: 46px; opacity: .7; }
 .intro { font-size: 17px; max-width: 900px; margin: 26px auto 0; }
 
 .legend { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin: 0 0 8px; }
