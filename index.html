@@ -245,11 +245,11 @@
       <div class="method-notes">
         <div>
           <h3>Structure first</h3>
-          <p>A <b>Planner</b> reads the image and decides the parts. A <b>Builder</b> constructs each part on one shared 64³ voxel canvas with <code>polygon</code>, <code>brush</code>, <code>move</code> and <code>clear</code> tools; the drawing tools can also erase. A <b>Reviewer</b> compares renders of the proxy with the image and can start up to two whole-object repair rounds. The agent talks to any LLM through protocol adapters, so switching providers is a config change.</p>
+          <p>A <b>Planner</b> decides the parts. A <b>Builder</b> constructs each one on a shared voxel canvas with drawing tools. A <b>Reviewer</b> compares the proxy with the image and triggers repair rounds. The agent is model-agnostic — switching providers is a config change.</p>
         </div>
         <div>
           <h3>Details bloom</h3>
-          <p>The proxy surface is dilated into a thin support band and encoded by the TRELLIS sparse-structure VAE, partially noised (t = 0.65) and refined by 12 image-guided denoising steps (CFG 5). Part labels move to the refined structure, one structured latent is sampled for the whole object, and each part is decoded from its own slice, so parts stay consistent with each other. TRELLIS's Gaussian decoder and texture baking produce a textured GLB for every part.</p>
+          <p>The proxy is encoded, partially noised, and refined with image guidance. Part labels move to the refined structure, one shared latent is sampled for the whole object, and each part is decoded from its own slice — so parts come out consistent with each other. Textures come from TRELLIS's own Gaussian decoder.</p>
         </div>
       </div>
 
