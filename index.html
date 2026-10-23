@@ -92,14 +92,15 @@
       <h2>Native Part Decomposition</h2>
       <p class="lede">
         PartBloom generates parts natively. Each part is split by function and independent motion, and small fixed
-        attachments stay with the part they belong to. We compare against dedicated 3D part-segmentation methods,
-        SegviGen and PartLLM (general granularity), which split a finished asset after the fact. Colors mark parts.
+        attachments stay with the part they belong to. For the two segmentation baselines, TRELLIS first generates
+        a 3D asset from the input image; SegviGen or PartLLM then splits that asset into parts. We label these pipelines
+        <b>TRELLIS + SegviGen</b> and <b>TRELLIS + PartLLM</b> (general granularity). Colors mark parts.
         To explore our parts in 3D, use <b>Parts</b> mode or the exploded view above.
       </p>
       <div class="figure-stack">
-        <img src="assets/parts/parts_01.webp" alt="Part decomposition comparison, rows 1 to 5" loading="lazy">
-        <img src="assets/parts/parts_02.webp" alt="Part decomposition comparison, rows 6 to 10" loading="lazy">
-        <img src="assets/parts/parts_03.webp" alt="Part decomposition comparison, rows 11 to 14" loading="lazy">
+        <img src="assets/parts/parts_01.webp?v=2" alt="Part decomposition comparison, rows 1 to 5" loading="lazy">
+        <img src="assets/parts/parts_02.webp?v=2" alt="Part decomposition comparison, rows 6 to 10" loading="lazy">
+        <img src="assets/parts/parts_03.webp?v=2" alt="Part decomposition comparison, rows 11 to 14" loading="lazy">
       </div>
     </section>
 
